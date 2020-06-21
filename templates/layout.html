@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <style>
+            a:hover{
+                color:yellowgreen;
+            }
+            h3{
+                text-align: center;
+                font-size: 32px;
+            }
+            a{
+                color:whitesmoke;
+            }
+            form>p>a{
+                font-size: 25px;
+            }
+            h1{
+                text-shadow: 2px 3px yellowgreen;
+                font-family: fantasy;
+                font-size: 90px;
+                color:whitesmoke;
+                padding-left: 40px;
+                text-align:center;
+            }
+            h2{
+                font-size: 48px;
+                font-family: Verdana;
+                color: yellowgreen;
+                text-align: center; 
+                padding-bottom: 23px;      
+            }
+            body{
+                background-color:  black;
+                color:whitesmoke;
+            }
+            input[name=search] {
+                width: 130px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('templates/searchicon.png');
+                background-position: 10px 10px; 
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+            }
+            input[name=search]:focus {
+                width: 70%;
+            }
+            .lol{
+                display: flex;
+                padding:25px;
+            }
+            .lol>p{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/search" method="post" class="lol">
+            <input type="text" name="search" placeholder="Search..">
+            <p>
+                <a href="{{ url_for('register') }}">Sign Up</a>
+            </p>
+            <p>
+                <a href="{{ url_for('login') }}">Log In</a>
+            </p>
+            <p>
+                <a href="{{ url_for('logout') }}">Log Out</a>
+            </p>
+        </form>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

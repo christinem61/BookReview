@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <style>
+        body{
+                background-color: black;
+            }
+        h1{
+                text-shadow: 2px 3px yellowgreen;
+                font-family: fantasy;
+                font-size: 90px;
+                color:whitesmoke;
+                padding-left: 40px;
+        }
+        input[type=text]{
+                width:50%;
+                color:yellowgreen;
+                font-weight: bold;
+                font-size: 26px;
+                padding:15px;
+                box-sizing: border-box;
+                border-width: 2px;
+                border-color:yellowgreen;
+                border-radius: 15px;
+        }
+        .btn{
+                background-color:yellowgreen;
+                font-weight: bold;
+                font-size: 29px;
+                padding:10px;
+                color:white;
+                margin:10px;
+        }
+        .btn:hover{
+                background-color:rgb(58, 87, 1);
+        }
+        form{
+            padding-left:40px;
+        }
+        a{
+            color:whitesmoke;
+        }
+        p{
+            text-align: right;
+            padding-right: 1em;
+        }
+        a:hover{
+            color:yellowgreen; 
+        }
+    </style>
+    <body>
+        <p>
+            <a href="{{ url_for('logout') }}">Log Out</a>
+        </p>
+        <h1>Explore Books</h1>
+        <form action="/search" method="post" class="form-inline">
+            <input class="form-control" name="search" placeholder="Search by title, author or ISBN..." type="text" required/>
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>    
+    </body>
+</html>

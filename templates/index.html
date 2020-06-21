@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        
+        <style>
+            body{
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                text-shadow: 2px 2px yellowgreen;
+                font-family: fantasy;
+                font-size: 100px;
+                color:whitesmoke;
+                padding: 50px;
+            }
+            .nav{
+                justify-content: center;
+            }
+            .btn{
+                background-color:yellowgreen;
+                font-weight: bold;
+                padding: 40px;
+            }
+            .btn:hover{
+                background-color:rgb(58, 87, 1);
+            }
+            a{
+                font-size:40px;
+                color:white;
+            }
+            a:hover{
+                color:whitesmoke;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Project 1 : Books</h1>
+        <div class="nav">
+            <button type="button" class="btn btn-primary btn-lg">
+                <a href="{{ url_for('register') }}">Sign Up</a>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg">
+                <a href="{{ url_for('login') }}">Log In</a>
+            </button> 
+        </div>
+        
+    </body>
+</html>
+

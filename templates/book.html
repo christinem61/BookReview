@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    .main{
+        font-size: 80px;
+        padding-top: 30px;
+    }
+    hr.dashed {
+        border-top: 3px dashed yellowgreen;
+    }
+    .list{
+        font-size: 25px;
+        font-family: Verdana;
+        padding-top:30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    p{
+        padding-bottom:0px;
+    }
+    h2{
+        font-size: 48px;
+        padding-bottom: 13px;   
+        font-weight: bold;   
+    }
+    .mrev{
+        text-align: center;
+        font-size: 24px;
+    }
+    .lrev{
+        padding-top: 20px;
+        text-align:  center;
+    }
+</style>
+
+    <h1 class="main">{{book.title}}</h1>
+    <hr class="dashed">
+    <div class="list">
+        <p><strong>Author: </strong>{{book.author}}</p>
+        <p><strong>Year Published: </strong>{{book.year}}</p>
+        <p><strong># of Ratings: </strong>{{result['work_ratings_count']}}</p>
+        <p><strong>Average Rating: </strong>{{result['average_rating']}}</p>
+        <p><strong>ISBN: </strong>{{book.isbn}}</p>
+    </div>
+    <h2>Reviews </h2>
+    {% for review in reviews %}
+        <div class="mrev">
+            <d>Rating: {{review.rating}}</d>
+            <p class="rev">{{review.review}}</p>
+        </div>
+    {% endfor %}
+<div class="lrev">
+    <h2>Leave a Review!</h2>
+            <form action="/{{book.isbn}}" method="post">
+                <div class="form-group">
+                    <input class="form-control" name="review" placeholder="Type Review Here (limit 500 chars)" type="text" required/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="rating" placeholder="Rating (1-5)" type="number" max=5 min=1 required>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>    
+</div>
+{% endblock %}

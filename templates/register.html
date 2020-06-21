@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Form</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                text-shadow: 2px 2px yellowgreen;
+                font-family: fantasy;
+                font-size: 70px;
+                color:whitesmoke;
+                padding: 50px 50px 50px 50px 50px 20px;
+            }
+            input[type=text], input[type=password] {
+                width:38%;
+                color:rgb(84, 126, 1);
+                font-weight: bold;
+                font-size: 20px;
+                padding: 12 34px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border-width: 2px;
+                border-color:yellowgreen;
+            }
+            .btn{
+                background-color:yellowgreen;
+                font-weight: bold;
+                font-size: 30px;
+                padding:10px;
+                color:white;
+            }
+            .btn:hover{
+                background-color:rgb(58, 87, 1);
+            }
+            form{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sign Up for BookFinder</h1>
+            <form action="/register" method="post">
+                <input class="form-control" name="name" placeholder="Name" type="text"/>    
+                <br>              
+                <input class="form-control" name="username" placeholder="Username" type="text" required/>
+                <br>
+                <input class="form-control" name="password" placeholder="Password" type="password" required/>
+                <br><br>
+                <button class="btn btn-primary" type="submit">Register</button> 
+            </form>  
+    </body>
+</html>

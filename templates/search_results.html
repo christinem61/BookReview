@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+    .list{
+        text-align: center;
+    }
+    h2{
+        font-size: 25px;
+    }
+</style>
+
+<div>
+    <h1>Search Results</h1>
+    <h2>Showing Results for "{{search}}"</h2>
+</div>
+{% for result in results %}
+    <div class="list">
+        <a href="/{{result.isbn}}">{{result.title}}</a>
+    </div>
+{% endfor %}
+{% endblock %}
