@@ -1,5 +1,4 @@
-#Project 1
-#Christine Mathews
+# Book Review Website
 
 Harvard cs50: Web Programming with Python and JavaScript
 
@@ -8,7 +7,8 @@ login using their username and password. Once they log in, they will be able to
 search for books, leave reviews for individual books and see reviews made by other 
 people. The Goodreads API was used to pull ratings from a broader audience. You can
 also query for book details and reviews via this website's API. A PostgreSQL
-database hosted by Heroku is what I used to store the user data. 
+database hosted by Heroku is what I used to store the user data, book reviews and 
+user information. 
 
 application.py
 
