@@ -10,6 +10,8 @@ also query for book details and reviews via this website's API. A PostgreSQL
 database hosted by Heroku is what I used to store the user data, book reviews and 
 user information. 
 
+Demo: https://www.youtube.com/watch?v=sGURSoy9odk
+
 application.py
 
 This is where the main set up of the webpage lies. It is where I have written
